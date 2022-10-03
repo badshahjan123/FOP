@@ -96,9 +96,8 @@
             The C language facilitates a structured and disciplined approach to
             comp uter-program design.
           </p>
-          <pre
-            class="fragment"
-          ><code class="java" data-trim data-line-numbers="|1,2,3,4,7,12|5|8,9,11|10" >
+          <pre class="fragment">
+            <code class="java" data-trim data-line-numbers="|1,2,3,4,7,12|5|8,9,11|10" >
 
 
                     /*
@@ -159,20 +158,56 @@
         </pre
           >
           <div style="font-size: 70%">
-            <span class="fragment"> <code style="font-size: 70%;">#include&lt;stdio.h&gt;</code>  is a
-            directive to the C <span class="hlgh">preprocessor</span>.</span>
+            <span class="fragment">
+              <code style="font-size: 70%">#include&lt;stdio.h&gt;</code> is a
+              directive to the C <span class="hlgh">preprocessor</span>.</span
+            >
             <span class="fragment"
               >Lines beginning with # are processed by the preprocessor before
               compilation.
             </span>
-            <p class="fragment"
-              >It tells the preprocessor to include the contents of the
-              <span class="hlgh">standard input/output header</span> (<code style="font-size: 70%;">&lt;stdio.h&gt;</code>) in the program.
-        </p>
-            <p class="fragment"
-              >This header contains information used by the compiler when
+            <p class="fragment">
+              It tells the preprocessor to include the contents of the
+              <span class="hlgh">standard input/output header</span> (<code
+                style="font-size: 70%"
+                >&lt;stdio.h&gt;</code
+              >) in the program.
+            </p>
+            <p class="fragment">
+              This header contains information used by the compiler when
               compiling calls to standard input/output library functions such as
-              printf.</p>
+              printf.
+            </p>
+          </div>
+        </section>
+        <section style="text-align: justify">
+          <h4 style="font-style: italic; text-transform: none">
+            The main Function
+          </h4>
+          <pre class="fragment">
+  
+            int main( void )
+        </pre
+          >
+          <div style="font-size: 70%">
+            <span class="fragment">
+              <span class="fragment"> <code style="font-size: 70%">int main( void )</code> is a part of every C program. </span>
+              
+              <p class="fragment"> The parentheses after main indicate that main is a program
+              building block called a <span class="hlgh">function</span>.</p> 
+              
+              <p class="fragment">C programs contain one or more functions, one of which
+              <i class="hlgh">must</i> be main.</p> 
+              
+              <p class="fragment">Every program in C begins executing at the function main. Functions can
+              <i class="hlgh">return</i> information. </p>
+              
+              <p class="fragment">The keyword int to the left of main indicates that main “returns” an
+              integer (whole-number) value.</p>
+
+              <span class="fragment">Functions also can <span class="hlgh">receive</span> information when they’re called upon to execute. </span>
+            </span><span class="fragment">The <span class="hlgh">void</span> in parentheses here means that main does not receive any information.</span>
+
           </div>
         </section>
         <section>

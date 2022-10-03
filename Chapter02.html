@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>FOP Chp-2</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!--         
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css"
+      integrity="sha512-ITH3NSfntO7uI5n+BnxGNXpzDUoOsmAXuG37UDONLxNYIdc0EBBOOQ1xyc+t9ag9ETSuBXFApx+Rod0uURfDYw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css"
+      integrity="sha512-RoEy1xOWgzryoplQ1g0eNHizP2BRqEq8eLGpRyI6OvM2FvmxpUyiPotvW4rp/I67VN6eFq4DDXQNcFKbNZ5Rrg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/monokai.min.css"
+      integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      img {
+        border: none;
+      }
+
+      h2 {
+        text-transform: none !important;
+      }
+
+      .slides {
+        vertical-align: top !important;
+      }
+
+      .reveal .hljs.has-highlights tr:not(.highlight-line) {
+        opacity: 0.1 !important;
+      }
+
+      .hlgh {
+        color: #0084ff;
+        font-style: italic;
+        /* text-decoration: underline; */
+      }
+      .hi {
+        color: #0084ff;
+        font-weight: bold;
+        text-transform: none;
+      }
+      section {
+        text-transform: none !important;
+      }
+      .reveal,
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 {
+        font-family: "Times New Roman" !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2 class="fragment">
+            <span class="hi">F</span>undamentals <span class="hi">O</span>f
+            <span class="hi">P</span>rogramming
+          </h2>
+          <h3 class="fragment" style="text-transform: none">Chapter 2</h3>
+          <h4 class="fragment" style="text-transform: none">Asim Riaz</h4>
+        </section>
+        <section style="text-align: justify">
+          <h2 style="color: #0084ff; text-transform: none">2.1 Introduction</h2>
+          <p class="fragment">
+            The C language facilitates a structured and disciplined approach to
+            comp uter-program design.
+          </p>
+          <pre
+            class="fragment"
+          ><code class="java" data-trim data-line-numbers="|1,2,3,4,7,12|5|8,9,11|10" >
+
+
+                    /*
+                    Fig. 2.1: fig02_01.c
+                    A first program in C 
+                    */
+                    #include &lt;stdio.h>
+                    
+                    // function main begins program execution 
+                    int main( void )
+                    {
+                       printf( "Welcome to C!\n" );
+                    } 
+                    // end function main 
+                            
+					</code></pre>
+        </section>
+        <section style="text-align: justify">
+          <h4 style="font-style: italic; text-transform: none">Comments</h4>
+          <pre class="fragment">
+
+        // Fig. 2.1: fig02_01.c
+        // A first program in C
+            </pre
+          >
+          <div style="font-size: 70%">
+            <span class="fragment"
+              >begin with <span class="hlgh">//</span> , indicating that these
+              two lines are <span class="hlgh">comments</span>.
+            </span>
+            <span class="fragment"
+              >You insert comments to
+              <span class="hlgh">document</span> programs and improve program
+              readability.
+            </span>
+            <p></p>
+            <span class="fragment"
+              >Comments do not cause the computer to perform any action when the
+              program is run—they’re ignored by the C compiler and do not cause
+              any machine-language object code to be generated.
+            </span>
+            <p></p>
+            <span class="fragment"
+              >You can also use <span class="hlgh">/*…*/</span> multi-line
+              comments in which everything from <span class="hlgh">/*</span> on
+              the first line to <span class="hlgh">*/</span> at the end of the
+              last line is a comment.</span
+            >
+          </div>
+        </section>
+        <section style="text-align: justify">
+          <h4 style="font-style: italic; text-transform: none">
+            #include Preprocessor Directive
+          </h4>
+          <pre class="fragment">
+  
+            #include &lt;stdio.h&gt;
+        </pre
+          >
+          <div style="font-size: 70%">
+            <span class="fragment"> <code style="font-size: 70%;">#include&lt;stdio.h&gt;</code>  is a
+            directive to the C <span class="hlgh">preprocessor</span>.</span>
+            <span class="fragment"
+              >Lines beginning with # are processed by the preprocessor before
+              compilation.
+            </span>
+            <p class="fragment"
+              >It tells the preprocessor to include the contents of the
+              <span class="hlgh">standard input/output header</span> (<code style="font-size: 70%;">&lt;stdio.h&gt;</code>) in the program.
+        </p>
+            <p class="fragment"
+              >This header contains information used by the compiler when
+              compiling calls to standard input/output library functions such as
+              printf.</p>
+          </div>
+        </section>
+        <section>
+          <h2 style="color: #0084ff; text-transform: none">
+            A Simple C Program: <br />
+            Printing a Line of Text
+          </h2>
+          <br />
+
+          <br /><br /><br /><br /><br /><br /><br />
+        </section>
+        <section style="vertical-align: middle">
+          <h2 class="fragment" style="text-transform: none; color: #0084ff">
+            Q&A
+          </h2>
+        </section>
+      </div>
+    </div>
+    <!-- 
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+ -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"
+      integrity="sha512-131e3mIrDAyUD075SVzvIjS0g97uDg0+/qAobDHd++h+lgFi4z88DVOpidm06jpb+0PzK4kcm9w79r6EHV0SkA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"
+      integrity="sha512-QAU7Ux8iEB53koLKFCtddfFp0D1+uQWoX3ROnRDLeiE98XHOkMciaup0Spc014jQAuJaqz8VjUZdBqriheI4Lg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"
+      integrity="sha512-U3fPDUX5bMrn1wnYqjaK44MFA9E6MKS+zPAg9WPAGF5XhReBeDj3FGaA831CjueG+YJxYA3WaO/m33kMIoOs/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/zoom/zoom.min.js"
+      integrity="sha512-Cq7BzXMxB/mFxVq/Neurj/BN0riz5uvUNRI4cKM2uRpJDGrkr5IOMyxUWmT5iAIjbPZJIhVc6qmDBkQXwCVjxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      Reveal.initialize({
+        center: false,
+        hash: true,
+        plugins: [RevealZoom, RevealHighlight, RevealMarkdown],
+      });
+    </script>
+  </body>
+</html>
